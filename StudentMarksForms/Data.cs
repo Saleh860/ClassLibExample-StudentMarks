@@ -18,5 +18,14 @@ namespace StudentMarksForms
         {
             courses[CourseCount++] = course;
         }
+        public static int GetCourseCount()
+        {
+            return CourseCount;
+        }
+        public static Course GetCourse(int i)
+        {
+            if (i < 0) return null;
+            return courses[i];
+        }
     }
 }
