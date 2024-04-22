@@ -1,6 +1,6 @@
 ﻿namespace StudentMarksForms
 {
-    partial class Form1
+    partial class AddNewCourseForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -33,6 +33,12 @@
             CourseName = new TextBox();
             CourseCode = new TextBox();
             AddCourse = new Button();
+            label3 = new Label();
+            Credits = new NumericUpDown();
+            label4 = new Label();
+            CourseList = new ComboBox();
+            button1 = new Button();
+            ((System.ComponentModel.ISupportInitialize)Credits).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -69,7 +75,7 @@
             // 
             // AddCourse
             // 
-            AddCourse.Location = new Point(169, 149);
+            AddCourse.Location = new Point(169, 237);
             AddCourse.Name = "AddCourse";
             AddCourse.Size = new Size(75, 23);
             AddCourse.TabIndex = 3;
@@ -77,18 +83,70 @@
             AddCourse.UseVisualStyleBackColor = true;
             AddCourse.Click += AddCourse_Click;
             // 
-            // Form1
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(49, 130);
+            label3.Name = "label3";
+            label3.Size = new Size(44, 15);
+            label3.TabIndex = 4;
+            label3.Text = "Credits";
+            // 
+            // Credits
+            // 
+            Credits.Location = new Point(151, 128);
+            Credits.Maximum = new decimal(new int[] { 8, 0, 0, 0 });
+            Credits.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            Credits.Name = "Credits";
+            Credits.Size = new Size(120, 23);
+            Credits.TabIndex = 5;
+            Credits.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(49, 176);
+            label4.Name = "label4";
+            label4.Size = new Size(74, 15);
+            label4.TabIndex = 4;
+            label4.Text = "Prerequisites";
+            // 
+            // CourseList
+            // 
+            CourseList.FormattingEnabled = true;
+            CourseList.Location = new Point(147, 173);
+            CourseList.Name = "CourseList";
+            CourseList.Size = new Size(235, 23);
+            CourseList.TabIndex = 6;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(319, 237);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 7;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // AddNewCourseForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(427, 279);
+            Controls.Add(button1);
+            Controls.Add(CourseList);
+            Controls.Add(Credits);
+            Controls.Add(label4);
+            Controls.Add(label3);
             Controls.Add(AddCourse);
             Controls.Add(CourseCode);
             Controls.Add(CourseName);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "AddNewCourseForm";
+            Text = "Add New Course";
+            ((System.ComponentModel.ISupportInitialize)Credits).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -100,5 +158,10 @@
         private TextBox CourseName;
         private TextBox CourseCode;
         private Button AddCourse;
+        private Label label3;
+        private NumericUpDown Credits;
+        private Label label4;
+        private ComboBox CourseList;
+        private Button button1;
     }
 }

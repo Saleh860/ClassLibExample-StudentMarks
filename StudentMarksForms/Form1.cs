@@ -2,20 +2,36 @@ using StudentMarks;
 
 namespace StudentMarksForms
 {
-    public partial class Form1 : Form
+    public partial class AddNewCourseForm : Form
     {
-        public Form1()
+        public AddNewCourseForm()
         {
             InitializeComponent();
         }
 
         private void AddCourse_Click(object sender, EventArgs e)
         {
-            Course newCourse = new Course(CourseCode.Text, CourseName.Text, 3, null); ;
+            Course prerequisite = Data.GetCourse(CourseList.SelectedIndex);
+            Course newCourse = new Course(CourseCode.Text,
+                CourseName.Text, Convert.ToInt32(Credits.Value), prerequisite);
             Data.AddCourse(newCourse);
+            FillPrerequisitesList();
             CourseCode.Text = "";
             CourseName.Text = "";
             CourseName.Focus();
+        }
+        private void FillPrerequisitesList()
+        {
+            CourseList.Items.Clear();
+            for (int i = 0; i < Data.GetCourseCount(); i++)
+            {
+                CourseList.Items.Add(Data.GetCourse(i).Name);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Form2().ShowDialog();
         }
     }
 }
