@@ -19,7 +19,21 @@
 
         public void AddEnrollment(Enrollment enrollment)
         {
-            Enrollments[EnrollmentCount++] = enrollment;
+            bool canEnroll = true;
+            if(enrollment.Course.Prerequisite!=null)
+            {
+                canEnroll = false;
+                for(int i=0; i<EnrollmentCount; i++)
+                {
+                    if (Enrollments[i].Course == enrollment.Course.Prerequisite 
+                        && Enrollments[i].Mark>=60)
+                        canEnroll = true;
+                }
+            }
+            if(canEnroll)
+            {
+                Enrollments[EnrollmentCount++] = enrollment;
+            }
         }
 
         public Enrollment[] GetEnrollments(int Semester)
