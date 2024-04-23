@@ -29,9 +29,9 @@ namespace StudentMarksForms
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void showCourses_Click(object sender, EventArgs e)
         {
-            new Form2().ShowDialog();
+            new ShowCourseListForm().ShowDialog();
         }
     }
 }

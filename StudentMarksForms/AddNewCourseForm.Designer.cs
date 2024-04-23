@@ -37,7 +37,7 @@
             Credits = new NumericUpDown();
             label4 = new Label();
             CourseList = new ComboBox();
-            button1 = new Button();
+            showCourses = new Button();
             ((System.ComponentModel.ISupportInitialize)Credits).BeginInit();
             SuspendLayout();
             // 
@@ -64,7 +64,7 @@
             CourseName.Location = new Point(145, 48);
             CourseName.Name = "CourseName";
             CourseName.Size = new Size(237, 23);
-            CourseName.TabIndex = 2;
+            CourseName.TabIndex = 1;
             // 
             // CourseCode
             // 
@@ -78,7 +78,7 @@
             AddCourse.Location = new Point(169, 237);
             AddCourse.Name = "AddCourse";
             AddCourse.Size = new Size(75, 23);
-            AddCourse.TabIndex = 3;
+            AddCourse.TabIndex = 5;
             AddCourse.Text = "Add Course";
             AddCourse.UseVisualStyleBackColor = true;
             AddCourse.Click += AddCourse_Click;
@@ -99,7 +99,7 @@
             Credits.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             Credits.Name = "Credits";
             Credits.Size = new Size(120, 23);
-            Credits.TabIndex = 5;
+            Credits.TabIndex = 3;
             Credits.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // label4
@@ -117,24 +117,24 @@
             CourseList.Location = new Point(147, 173);
             CourseList.Name = "CourseList";
             CourseList.Size = new Size(235, 23);
-            CourseList.TabIndex = 6;
+            CourseList.TabIndex = 4;
             // 
-            // button1
+            // showCourses
             // 
-            button1.Location = new Point(319, 237);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 7;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            showCourses.Location = new Point(319, 237);
+            showCourses.Name = "showCourses";
+            showCourses.Size = new Size(75, 23);
+            showCourses.TabIndex = 7;
+            showCourses.Text = "Show ...";
+            showCourses.UseVisualStyleBackColor = true;
+            showCourses.Click += showCourses_Click;
             // 
             // AddNewCourseForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(427, 279);
-            Controls.Add(button1);
+            Controls.Add(showCourses);
             Controls.Add(CourseList);
             Controls.Add(Credits);
             Controls.Add(label4);
@@ -162,6 +162,6 @@
         private NumericUpDown Credits;
         private Label label4;
         private ComboBox CourseList;
-        private Button button1;
+        private Button showCourses;
     }
 }

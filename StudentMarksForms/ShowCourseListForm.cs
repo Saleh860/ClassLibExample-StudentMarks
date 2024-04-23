@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StudentMarksForms
 {
-    public partial class Form2 : Form
+    public partial class ShowCourseListForm : Form
     {
-        public Form2()
+        public ShowCourseListForm()
         {
             InitializeComponent();
         }
@@ -23,7 +23,7 @@ namespace StudentMarksForms
             for(int i=0; i<Data.GetCourseCount(); i++)
             {
                 ListViewItem item= new ListViewItem();
-                item.SubItems[0].Text = Data.GetCourse(i).Code;
+                item.Text = Data.GetCourse(i).Code;
                 item.SubItems.Add(Data.GetCourse(i).Name);
                 item.SubItems.Add($"{Data.GetCourse(i).Credits}");
                 if(Data.GetCourse(i).Prerequisite!= null)

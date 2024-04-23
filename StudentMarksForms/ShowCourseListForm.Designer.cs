@@ -1,6 +1,6 @@
 ﻿namespace StudentMarksForms
 {
-    partial class Form2
+    partial class ShowCourseListForm
     {
         /// <summary>
         /// Required designer variable.
